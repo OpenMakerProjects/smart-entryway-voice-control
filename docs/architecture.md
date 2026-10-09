@@ -1,9 +1,2 @@
 # Architecture
-
-```text
-Sensors -> validation and filtering -> closed loop control -> output/alert
-                                      |
-                                      +-> Wi-Fi telemetry and logs
-```
-
-The implementation separates acquisition, decision logic, output handling, and telemetry. Hardware-specific access is kept at the edge so the core behavior can be tested with simulated readings.
+Phone microphone sends audio to a configured local Home Assistant Assist pipeline using local Whisper speech-to-text, Home Assistant conversation intents and Piper reply. HA native ESPHome API controls RGB light; no audio or speech recognition runs on ESP32. BME280 supplies environmental entities and OLED bars. No hosted/cloud voice account is required by this design. End-to-end voice has not been tested.
