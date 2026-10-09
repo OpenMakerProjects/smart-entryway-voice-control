@@ -1,0 +1,1 @@
+{"examples":["turn on Entryway Indicator","set Entryway Indicator to blue","turn off Entryway Indicator"],"expected":"HA light entity changes; depends on configured local pipeline","hardware_observed":false}
